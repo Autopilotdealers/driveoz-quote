@@ -62,7 +62,7 @@ footer{background:#000;color:#9a9aa3;padding:30px 0;font-size:13px;text-align:ce
 <div><label>Last name <span class="req">*</span></label><input name="last_name" required autocomplete="family-name"></div></div>
 <div class="row"><div><label>Phone <span class="req">*</span></label><input name="phone" type="tel" required autocomplete="tel"></div>
 <div><label>ZIP <span class="req">*</span></label><input name="zip" required inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code"></div></div>
-<label>Email <span class="req">*</span></label><input name="email" type="email" required autocomplete="email">
+<label>Email <span class="req">*</span></label><input name="email" type="email" required autocomplete="email"><label>Choose your sales agent</label><select name="Sales agent" id="agent"><option selected>No preference</option><option>Michael Oz</option><option>Eytan Gelman</option><option>Carson Lawrence</option></select>
 <label>Vehicle you want</label><input name="vehicle" placeholder="e.g. BMW X5, Kia Telluride">
 <label>Lease or buy?</label><div class="toggle"><input type="radio" name="type" id="t1" value="Lease" checked><label for="t1">Lease</label><input type="radio" name="type" id="t2" value="Buy"><label for="t2">Buy</label></div>
 <label>Desired monthly budget (optional)</label><input name="budget" placeholder="e.g. $700/mo">
