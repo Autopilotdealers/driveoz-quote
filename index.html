@@ -95,7 +95,7 @@ const q=new URLSearchParams(location.search);document.getElementById('src').valu
 const f=document.getElementById('f');f.addEventListener('submit',async e=>{e.preventDefault();if(f._honey.value)return;
 const b=f.querySelector('.cta');b.disabled=true;b.textContent='Sending…';const d=Object.fromEntries(new FormData(f));
 d._subject='[QUOTE LEAD] '+d.first_name+' '+d.last_name;d._template='table';d._captcha='false';delete d._honey;
-try{const r=await fetch('https://formsubmit.co/ajax/michael@driveoz.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)});if(!r.ok)throw 0;
+try{const r=await fetch('https://formsubmit.co/ajax/michael@driveoz.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)});const j=await r.json();if(!r.ok||String(j.success)!=='true')throw 0;
 document.getElementById('formbox').style.display='none';document.getElementById('thanks').style.display='block';}
 catch(x){b.disabled=false;b.textContent='Get My Fleet Price →';alert('Sorry, something went wrong. Please call or text 954-256-8357.');}});
 </script></body></html>
